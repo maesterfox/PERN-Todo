@@ -1,0 +1,23 @@
+# Use an official Node.js runtime as a parent image
+FROM node:14
+
+# Set the working directory to /app
+WORKDIR /app
+
+# Copy the current directory contents into the container at /app
+COPY . .
+
+# Install server dependencies
+RUN npm install
+
+# Install client dependencies
+RUN npm install --prefix client
+
+# Build the client
+RUN npm run build --prefix client
+
+# Make port 5000 available to the world outside this container
+EXPOSE 5000
+
+# Run the server
+CMD ["node", "server/index.js"]

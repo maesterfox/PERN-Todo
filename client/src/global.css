@@ -1,0 +1,99 @@
+/* Import Roboto Font */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
+
+/* Global styles */
+body {
+  font-family: 'Roboto', sans-serif;
+  background: linear-gradient(90deg, #35025a 10%, #031a5a 100%);
+  color: #c9c9c9;
+  margin: 0;
+  padding: 0;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  color: #f8dfdf !important;
+  text-shadow: rgb(234, 0, 255) 2px 2px 2px, rgb(0, 0, 0) 4px 4px 4px;
+  border-radius: 5px;
+  padding: .5rem;
+
+}
+
+@keyframes gradientAnimation {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+/* Shadow effect */
+.shadow {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1), 0 6px 20px rgba(0, 0, 0, 0.1);
+}
+
+/* Hover effect */
+.hover {
+  transition: background 0.9s ease-in-out, box-shadow 0.9s ease-in-out;
+}
+
+
+/* Button styles */
+.btn-custom {
+  background: linear-gradient(135deg, #5e089c, #192f6a, #75047b);
+  background-size: 400% 400%;  
+  color: #fddfff;
+  border: 1px solid #ee07ff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1), 0 6px 20px rgba(0, 0, 0, 0.1);
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.6s ease-in-out, box-shadow 0.6s ease-in-out !important;
+}
+
+.btn-custom:hover {
+  background: linear-gradient(135deg, #192f6a 10%, #75047b 100%);
+  box-shadow: 0 4px 12px rgba(114, 0, 127, 1);
+  color:rgba(226, 9, 250);
+}
+
+/* Animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.fade-in {
+  animation: fadeIn 1s ease-in-out;
+}
+
+/* Form styles */
+.form-control {
+  border-radius: 5px;
+  padding: 10px;
+  font-size: 16px;
+  box-shadow: 0 4px 8px rgba(255, 0, 242, 0.5), 0 6px 20px rgba(0, 0, 0, 0.1), 0 8px 32px rgba(0, 0, 0, 0.1);
+}
+
+/* Table styles */
+.table {
+  background-color: rgba(123, 0, 255, 0.235);
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+.table thead {
+  background: linear-gradient(135deg, #5e089c 10%, #192f6a 100%);
+  color: white;
+}
+
+

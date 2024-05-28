@@ -1,0 +1,32 @@
+.pagination {
+  display: flex !important;
+  justify-content: center !important;
+  margin-top: 1rem !important;
+
+}
+
+.pageItem {
+  background: linear-gradient(135deg, #5e089c, #192f6a, #75047b) !important;
+  color: #c9c9c9 !important;
+  border: 1px solid #ee07ff !important;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1), 0 6px 20px rgba(0, 0, 0, 0.1) !important;
+  margin: 0 2px !important;
+  border-radius: 50% !important;
+
+}
+
+.pageItem.active {
+  background: linear-gradient(135deg, #192f6a 10%, #75047b 100%) !important;
+  color: #ffffff !important;
+  box-shadow: 0 4px 12px rgba(255, 0, 255, 0.5), 0 6px 20px rgba(0, 0, 0, 0.1), 0 0 10px 2px rgba(0, 255, 0, 0.8) !important;
+  border: 1px solid #00ff00 !important;
+  border-radius: 50% !important;
+
+}
+
+.pageItem:hover {
+  background: linear-gradient(135deg, #192f6a 10%, #75047b 100%) !important;
+  box-shadow: 0 4px 12px rgba(255, 0, 255, 0.5), 0 6px 20px rgba(0, 0, 0, 0.1), 0 0 10px 2px rgba(0, 255, 0, 0.8) !important;
+  border: 1px solid #00ff00 !important;
+  border-radius: 50% !important;
+}

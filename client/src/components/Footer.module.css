@@ -1,0 +1,44 @@
+.footer {
+  background: linear-gradient(135deg, #5e089c, #192f6a, #75047b);
+  background-size: 400% 400%;
+  color: #c9c9c9;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1), 0 6px 20px rgba(0, 0, 0, 0.1);
+  border: #ee07ff solid 1px;
+  animation: gradientAnimation 10s ease infinite;
+}
+
+@keyframes gradientAnimation {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.logo {
+  height: 50px;
+  width: 50px;
+  transition: transform 0.3s ease-in-out;
+}
+
+.logo:hover {
+  transform: scale(1.1);
+}
+
+.text {
+  color: #c9c9c9;
+}
+
+.about {
+  color: #ff00ff;
+  background-color: #1b0b27;
+  border-radius: 5px;
+  padding: 0.5rem;
+  border: #ee07ff solid 1px;
+}

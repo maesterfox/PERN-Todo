@@ -1,6 +1,8 @@
 {
-    "build": {
-      "dockerfile": "./Dockerfile"
-    }
+  "name": "pern-todo",
+  "version": "1.0.0",
+  "scripts": {
+    "build": "docker build -t pern-todo .",
+    "start": "docker run -p 5000:5000 pern-todo"
   }
-  
+}

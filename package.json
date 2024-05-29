@@ -2,7 +2,7 @@
   "name": "pern-todo",
   "version": "1.0.0",
   "scripts": {
-    "install": "npm install && npm install --prefix client",
+    "install": "npm install --prefix server && npm install --prefix client",
     "build": "npm run build --prefix client",
     "start": "node server/index.js"
   }

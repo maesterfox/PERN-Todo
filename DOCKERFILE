@@ -4,7 +4,7 @@ FROM node:14
 # Set the working directory to /app
 WORKDIR /app
 
-# Copy package.json and package-lock.json files from the server directory
+# Copy server package.json and package-lock.json files to the container
 COPY server/package*.json ./server/
 
 # Install server dependencies
@@ -16,7 +16,7 @@ COPY server ./server
 # Set the working directory for the client
 WORKDIR /app/client
 
-# Copy package.json and package-lock.json files from the client directory
+# Copy client package.json and package-lock.json files to the container
 COPY client/package*.json ./
 
 # Install client dependencies

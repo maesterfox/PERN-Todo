@@ -1,0 +1,14 @@
+# nixpacks.toml
+
+[phases.setup]
+runtime = "nodejs_18"
+npm = "9_x"
+
+[phases.install]
+cmds = ["npm install", "npm install --prefix client"]
+
+[phases.build]
+cmds = ["npm run build --prefix client"]
+
+[phases.start]
+cmds = ["node server/index.js"]

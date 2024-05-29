@@ -2,7 +2,8 @@
   "name": "pern-todo",
   "version": "1.0.0",
   "scripts": {
-    "build": "docker build -t pern-todo .",
-    "start": "docker run -p 5000:5000 pern-todo"
+    "install": "npm install && npm install --prefix client",
+    "build": "npm run build --prefix client",
+    "start": "node server/index.js"
   }
 }

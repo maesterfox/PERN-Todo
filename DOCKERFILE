@@ -1,17 +1,16 @@
 # Use an official Node.js runtime as a parent image
-FROM node:14
+FROM node:18
 
 # Set the working directory to /app
-WORKDIR /app
+WORKDIR /app/server
 
 # Copy server package.json and package-lock.json files to the container
-COPY server/package*.json ./server/
+COPY server/package*.json ./
 
 # Install server dependencies
-RUN npm install --prefix ./server
-
+RUN npm install
 # Copy the server directory contents into the container
-COPY server ./server
+COPY server ./
 
 # Set the working directory for the client
 WORKDIR /app/client

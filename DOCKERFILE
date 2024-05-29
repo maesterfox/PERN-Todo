@@ -7,25 +7,24 @@ WORKDIR /app
 # Copy server package.json and package-lock.json files to the container
 COPY server/package*.json ./server/
 
-# Install server dependencies
-RUN npm install --prefix ./server
-
 # Copy client package.json and package-lock.json files to the container
 COPY client/package*.json ./client/
 
+# Install server dependencies
+RUN cd ./server && npm install
+
 # Install client dependencies
-RUN npm install --prefix ./client
+RUN cd ./client && npm install
 
 # Copy the rest of the server and client directories into the container
 COPY server ./server
 COPY client ./client
 
 # Build the client
-WORKDIR /app/client
-RUN npm run build
+RUN cd ./client && npm run build
 
 # Move build files to the server's public directory
-RUN cp -r build ../server/public
+RUN cp -r ./client/build ./server/public
 
 # Set the working directory back to /app/server
 WORKDIR /app/server

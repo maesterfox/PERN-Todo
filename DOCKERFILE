@@ -4,29 +4,20 @@ FROM node:14
 # Set the working directory to /app
 WORKDIR /app
 
-# Copy server package.json and package-lock.json files to the container
+# Copy only the necessary files to the container
 COPY server/package*.json ./server/
-
-# Copy client package.json and package-lock.json files to the container
 COPY client/package*.json ./client/
 
-# Install server dependencies
-RUN cd ./server && npm install
+# Copy the entire project to the container
+COPY . .
 
-# Install client dependencies
-RUN cd ./client && npm install
-
-# Copy the rest of the server and client directories into the container
-COPY server ./server
-COPY client ./client
-
-# Build the client
-RUN cd ./client && npm run build
+# Install dependencies and build the client using the custom build command
+RUN npm install --prefix server && npm install --prefix client && npm run build --prefix client
 
 # Move build files to the server's public directory
-RUN cp -r ./client/build ./server/public
+RUN cp -r client/build server/public
 
-# Set the working directory back to /app/server
+# Set the working directory to the server
 WORKDIR /app/server
 
 # Expose port 5000
